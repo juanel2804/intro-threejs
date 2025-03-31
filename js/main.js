@@ -1,5 +1,8 @@
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.156.1/build/three.module.js';
 
-import * as THREE from 'https://unpkg.com/three@0.156.1/build/three.module.js';
+
+// Tu código con Three.js aquí...
+
 
 
 
