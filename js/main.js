@@ -1,6 +1,5 @@
-import * as THREE from './three.module.js';
 
-// otros imports si tienes
+
 
 // 🚀 Escena
 const scene = new THREE.Scene();
@@ -149,10 +148,11 @@ diamondMaterial.envMapIntensity = 2.5;
 // Parte superior: cono invertido
 const topGeometry = new THREE.ConeGeometry(0.2, 0.2, 8);
 topGeometry.rotateX(Math.PI);
-const top = new THREE.Mesh(topGeometry, diamondMaterial);
-top.castShadow = true;
-top.position.y = .1;    // La mitad del alto del cono
-diamondGroup.add(top);
+const topMesh = new THREE.Mesh(topGeometry, diamondMaterial);  // <-- cambia "top" por "topMesh"
+topMesh.castShadow = true;
+topMesh.position.y = 0.1;
+diamondGroup.add(topMesh);
+
 
 // Parte inferior: pirámide
 const bottomGeometry = new THREE.ConeGeometry(0.2, 0.25, 8);
